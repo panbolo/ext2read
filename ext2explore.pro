@@ -1,8 +1,16 @@
 # -------------------------------------------------
 # Project created by QtCreator 2010-03-15T21:59:31
 # -------------------------------------------------
+QT       += core gui widgets
+
 TARGET = ext2explore
+CONFIG(debug, debug|release) {
+	TARGET = ext2explore_d
+}
+
+DESTDIR = $$PWD/../bin/succubus
 TEMPLATE = app
+
 #DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 QMAKE_LFLAGS += -static-libgcc -static-libstdc++
 SOURCES += main.cpp \
